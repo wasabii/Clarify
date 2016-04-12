@@ -142,45 +142,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MetadataRef.cs" />
+    <Compile Include="TrackRef.cs" />
     <Compile Include="ClarifyApiClient.cs" />
     <Compile Include="AudioChannel.cs" />
     <Compile Include="AudioLanguage.cs" />
     <Compile Include="Bundle.cs" />
-    <Compile Include="BundleTrackList.cs" />
-    <Compile Include="BundleMetadata.cs" />
+    <Compile Include="Ref.cs" />
+    <Compile Include="Tracks.cs" />
+    <Compile Include="Metadata.cs" />
     <Compile Include="BundleTrackPostRequest.cs" />
+    <Compile Include="HalClassAttribute.cs" />
+    <Compile Include="HalException.cs" />
+    <Compile Include="HalLink.cs" />
+    <Compile Include="HalLinks.cs" />
+    <Compile Include="HalObject.cs" />
     <Compile Include="InsightLink.cs" />
-    <Compile Include="BundleInsightLinkList.cs" />
-    <Compile Include="BundleInsightLinkListJsonConverter.cs" />
-    <Compile Include="BundlePutResponse.cs" />
+    <Compile Include="Insights.cs" />
     <Compile Include="BundlePutRequest.cs" />
     <Compile Include="BundlePostRequest.cs" />
-    <Compile Include="BundlePostResponse.cs" />
-    <Compile Include="BundleTracks.cs" />
+    <Compile Include="BundleRef.cs" />
     <Compile Include="Insight.cs" />
     <Compile Include="InsightStatus.cs" />
     <Compile Include="PagedResponse.cs" />
     <Compile Include="Track.cs" />
-    <Compile Include="Insights\TrackInsightData.cs" />
     <Compile Include="TrackStatus.cs" />
-    <Compile Include="Insights\TranscriptMeta.cs" />
-    <Compile Include="Insights\TranscriptR4InsightData.cs" />
-    <Compile Include="Insights\TranscriptR4TrackInsightData.cs" />
-    <Compile Include="Insights\TranscriptR4Transcript.cs" />
-    <Compile Include="Insights\TranscriptSegment.cs" />
-    <Compile Include="Insights\TranscriptSpeaker.cs" />
-    <Compile Include="Insights\TranscriptTerm.cs" />
-    <Compile Include="Insights\TranscriptTermType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\DictionaryExtensions.cs" />
     <Compile Include="Util\EnumUtil.cs" />
     <Compile Include="Util\UriExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Clarify.nuspec" />
-    <None Include="Insights\TranscriptR4InsightData.json" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Insights2\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

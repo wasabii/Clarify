@@ -1,30 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Clarify
 {
 
-    public class Insight :
+    public class Metadata :
         HalObject
     {
-
-        public Guid Id
-        {
-            get { return GetPropertyValue<Guid>("id"); }
-        }
 
         public Guid BundleId
         {
             get { return GetPropertyValue<Guid>("bundle_id"); }
         }
 
-        public string Name
+        public int Version
         {
-            get { return GetPropertyValue<string>("name"); }
-        }
-
-        public InsightStatus Status
-        {
-            get { return GetPropertyValue<InsightStatus>("status"); }
+            get { return GetPropertyValue<int>("version"); }
         }
 
         public DateTime Created
@@ -35,6 +26,11 @@ namespace Clarify
         public DateTime Updated
         {
             get { return GetPropertyValue<DateTime>("updated"); }
+        }
+
+        public Dictionary<string, object> Data
+        {
+            get { return GetPropertyValue<Dictionary<string, object>>("data"); }
         }
 
     }
