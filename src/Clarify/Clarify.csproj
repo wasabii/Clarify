@@ -142,6 +142,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HalLinksJsonConverter.cs" />
+    <Compile Include="Profiles\ClassificationAcoustics.cs" />
+    <Compile Include="Profiles\SpokenWordsTrackData.cs" />
+    <Compile Include="Profiles\SpokenWordsInsight.cs" />
+    <Compile Include="Profiles\ClassificationInsight.cs" />
+    <Compile Include="Profiles\TranscriptMeta.cs" />
+    <Compile Include="Profiles\TranscriptR9Meta.cs" />
+    <Compile Include="Profiles\TranscriptR9Term.cs" />
+    <Compile Include="Profiles\TranscriptR9Segment.cs" />
+    <Compile Include="Profiles\TranscriptR9Transcript.cs" />
+    <Compile Include="Profiles\TranscriptR9Data.cs" />
+    <Compile Include="Profiles\TranscriptR9TrackData.cs" />
+    <Compile Include="Profiles\TranscriptR9Insight.cs" />
+    <Compile Include="Profiles\TranscriptR4Insight.cs" />
+    <Compile Include="Profiles\TranscriptR4Language.cs" />
+    <Compile Include="Profiles\TranscriptR4Meta.cs" />
+    <Compile Include="Profiles\ClassificationTrackData.cs" />
+    <Compile Include="Profiles\TranscriptR4TrackData.cs" />
+    <Compile Include="Profiles\TranscriptR4Transcript.cs" />
+    <Compile Include="Profiles\TranscriptR4Segment.cs" />
+    <Compile Include="Profiles\TranscriptR4Term.cs" />
+    <Compile Include="Profiles\TranscriptR9Speaker.cs" />
+    <Compile Include="Profiles\TranscriptR9TermType.cs" />
     <Compile Include="MetadataRef.cs" />
     <Compile Include="TrackRef.cs" />
     <Compile Include="ClarifyApiClient.cs" />
@@ -178,9 +201,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Insights2\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

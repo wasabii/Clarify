@@ -2,11 +2,11 @@
 
 using Newtonsoft.Json;
 
-namespace Clarify.Insights
+namespace Clarify.Profiles
 {
 
     [DataContract]
-    public class TranscriptSpeaker
+    public class TranscriptR9Speaker
     {
 
         [DataMember]

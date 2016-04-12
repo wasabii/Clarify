@@ -2,16 +2,16 @@
 
 using Newtonsoft.Json;
 
-namespace Clarify.Insights
+namespace Clarify.Profiles
 {
 
     [DataContract]
-    public class TranscriptTerm
+    public class TranscriptR9Term
     {
 
         [DataMember]
-        [JsonProperty("type")]
-        public TranscriptTermType? Type { get; set; }
+        [JsonProperty("type", NullValueHandling = NullValueHandling.Ignore)]
+        public TranscriptR9TermType? Type { get; set; }
 
         [DataMember]
         [JsonProperty("term")]

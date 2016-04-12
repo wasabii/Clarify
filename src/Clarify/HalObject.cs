@@ -1,42 +1,30 @@
-﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
-
-using Clarify.Util;
+﻿using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Clarify
 {
 
-    [JsonDictionary]
-    public abstract class HalObject :
-        Dictionary<string, JToken>
+    [DataContract]
+    public abstract class HalObject
     {
+        
+        [DataMember]
+        [JsonProperty("_class")]
+        public string HalClass { get; set; }
 
-        readonly Dictionary<string, object> properties =
-            new Dictionary<string, object>();
+        [DataMember]
+        [JsonProperty("_links")]
+        public HalLinks HalLinks { get; set; }
 
-        /// <summary>
-        /// Gets the property value of the given property name.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="key"></param>
-        /// <returns></returns>
-        protected T GetPropertyValue<T>(string key)
+        public HalLink SelfLink
         {
-            return (T)properties.GetOrAdd(key, _ => this.ContainsKey(_) ? this[_].ToObject<T>() : default(T));
+            get { return HalLinks.Self; }
         }
 
-
-        public string HalClass
+        public HalLink ParentLink
         {
-            get { return GetPropertyValue<string>("_class"); }
-        }
-
-        public HalLinks HalLinks
-        {
-            get { return GetPropertyValue<HalLinks>("_links"); }
+            get { return HalLinks.Parent; }
         }
 
     }

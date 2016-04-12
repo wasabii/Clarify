@@ -1,0 +1,664 @@
+{
+    "id": "22c929380bb242329de1076426ec0e4b",
+    "bundle_id": "1577e8f9d42c4d12a762f53cd9f4188c",
+    "name": "transcript_r4",
+    "status": "ready",
+    "created": "2016-04-11T21:44:37.265Z",
+    "updated": "2016-04-12T00:09:13.133Z",
+    "track_data": [
+        {
+            "transcript": {
+                "segments": [
+                    {
+                        "start": 3.49,
+                        "dur": 0.65,
+                        "terms": [
+                            {
+                                "term": "hello",
+                                "dur": 0.65,
+                                "start": 3.49
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 5.99,
+                        "dur": 0.2,
+                        "terms": [
+                            {
+                                "term": "uh-huh",
+                                "dur": 0.2,
+                                "start": 5.99
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 6.3,
+                        "dur": 1.02,
+                        "terms": [
+                            {
+                                "term": "so",
+                                "dur": 0.29,
+                                "start": 6.3
+                            },
+                            {
+                                "term": "really",
+                                "dur": 0.14,
+                                "start": 7.18
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 9.06,
+                        "dur": 2.18,
+                        "terms": [
+                            {
+                                "term": "good",
+                                "dur": 0.42,
+                                "start": 9.06
+                            },
+                            {
+                                "term": "would",
+                                "dur": 0.07,
+                                "start": 9.92
+                            },
+                            {
+                                "term": "you",
+                                "dur": 0.07,
+                                "start": 9.99
+                            },
+                            {
+                                "term": "like",
+                                "dur": 0.17,
+                                "start": 10.1
+                            },
+                            {
+                                "term": "to",
+                                "dur": 0.09,
+                                "start": 10.27
+                            },
+                            {
+                                "term": "buy",
+                                "dur": 0.25,
+                                "start": 10.36
+                            },
+                            {
+                                "term": "some",
+                                "dur": 0.17,
+                                "start": 10.61
+                            },
+                            {
+                                "term": "stuff",
+                                "dur": 0.42,
+                                "start": 10.82
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 12.2,
+                        "dur": 0.11,
+                        "terms": [
+                            {
+                                "term": "uh-huh",
+                                "dur": 0.11,
+                                "start": 12.2
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 12.84,
+                        "dur": 0.91,
+                        "terms": [
+                            {
+                                "term": "I'm",
+                                "dur": 0.1,
+                                "start": 12.84
+                            },
+                            {
+                                "term": "not",
+                                "dur": 0.17,
+                                "start": 12.94
+                            },
+                            {
+                                "term": "really",
+                                "dur": 0.29,
+                                "start": 13.15
+                            },
+                            {
+                                "term": "sure",
+                                "dur": 0.31,
+                                "start": 13.44
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 14.88,
+                        "dur": 0.54,
+                        "terms": [
+                            {
+                                "term": "well",
+                                "dur": 0.18,
+                                "start": 14.88
+                            },
+                            {
+                                "term": "you",
+                                "dur": 0.08,
+                                "start": 15.26
+                            },
+                            {
+                                "term": "know",
+                                "dur": 0.08,
+                                "start": 15.34
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 16.32,
+                        "dur": 1.95,
+                        "terms": [
+                            {
+                                "term": "the",
+                                "dur": 0.1,
+                                "start": 16.32
+                            },
+                            {
+                                "term": "features",
+                                "dur": 0.38,
+                                "start": 16.44
+                            },
+                            {
+                                "term": "and",
+                                "dur": 0.13,
+                                "start": 16.82
+                            },
+                            {
+                                "term": "benefits",
+                                "dur": 0.67,
+                                "start": 16.95
+                            },
+                            {
+                                "term": "of",
+                                "dur": 0.21,
+                                "start": 17.65
+                            },
+                            {
+                                "term": "product",
+                                "dur": 0.36,
+                                "start": 17.91
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 20.43,
+                        "dur": 3.11,
+                        "terms": [
+                            {
+                                "term": "my",
+                                "dur": 0.15,
+                                "start": 20.43
+                            },
+                            {
+                                "term": "son's",
+                                "dur": 0.25,
+                                "start": 20.65
+                            },
+                            {
+                                "term": "lovely",
+                                "dur": 0.4,
+                                "start": 21.17
+                            },
+                            {
+                                "term": "what",
+                                "dur": 0.18,
+                                "start": 21.66
+                            },
+                            {
+                                "term": "sort",
+                                "dur": 0.23,
+                                "start": 21.84
+                            },
+                            {
+                                "term": "of",
+                                "dur": 0.09,
+                                "start": 22.1
+                            },
+                            {
+                                "term": "benefits",
+                                "dur": 0.33,
+                                "start": 22.19
+                            },
+                            {
+                                "term": "right",
+                                "dur": 0.26,
+                                "start": 22.91
+                            },
+                            {
+                                "term": "yeah",
+                                "dur": 0.27,
+                                "start": 23.27
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 24.99,
+                        "dur": 1.15,
+                        "terms": [
+                            {
+                                "term": "well",
+                                "dur": 0.49,
+                                "start": 24.99
+                            },
+                            {
+                                "term": "for",
+                                "dur": 0.18,
+                                "start": 25.96
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 26.24,
+                        "dur": 0.26,
+                        "terms": [
+                            {
+                                "term": "next",
+                                "dur": 0.26,
+                                "start": 26.24
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 27.05,
+                        "dur": 3.8,
+                        "terms": [
+                            {
+                                "term": "BT",
+                                "dur": 0.31,
+                                "start": 27.05
+                            },
+                            {
+                                "term": "has",
+                                "dur": 0.51,
+                                "start": 27.94
+                            },
+                            {
+                                "term": "benefits",
+                                "dur": 0.29,
+                                "start": 29.35
+                            },
+                            {
+                                "term": "X",
+                                "dur": 0.3,
+                                "start": 29.79
+                            },
+                            {
+                                "term": "Y",
+                                "dur": 0.26,
+                                "start": 30.09
+                            },
+                            {
+                                "term": "and",
+                                "dur": 0.15,
+                                "start": 30.35
+                            },
+                            {
+                                "term": "Z",
+                                "dur": 0.35,
+                                "start": 30.5
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 32.56,
+                        "dur": 0.45,
+                        "terms": [
+                            {
+                                "term": "I'm",
+                                "dur": 0.11,
+                                "start": 32.56
+                            },
+                            {
+                                "term": "pretty",
+                                "dur": 0.16,
+                                "start": 32.74
+                            },
+                            {
+                                "term": "good",
+                                "dur": 0.11,
+                                "start": 32.9
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 34.29,
+                        "dur": 0.22,
+                        "terms": [
+                            {
+                                "term": "yeah",
+                                "dur": 0.22,
+                                "start": 34.29
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 36.04,
+                        "dur": 0.25,
+                        "terms": [
+                            {
+                                "term": "uh-huh",
+                                "dur": 0.25,
+                                "start": 36.04
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 39.32,
+                        "dur": 1.43,
+                        "terms": [
+                            {
+                                "term": "okay",
+                                "dur": 0.51,
+                                "start": 39.32
+                            },
+                            {
+                                "term": "well",
+                                "dur": 0.53,
+                                "start": 40.22
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 42.09,
+                        "dur": 0.18,
+                        "terms": [
+                            {
+                                "term": "uh-huh",
+                                "dur": 0.18,
+                                "start": 42.09
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 42.63,
+                        "dur": 2.12,
+                        "terms": [
+                            {
+                                "term": "I",
+                                "dur": 0.07,
+                                "start": 42.63
+                            },
+                            {
+                                "term": "I",
+                                "dur": 0.31,
+                                "start": 42.7
+                            },
+                            {
+                                "term": "look",
+                                "dur": 0.24,
+                                "start": 43.18
+                            },
+                            {
+                                "term": "forward",
+                                "dur": 0.25,
+                                "start": 43.42
+                            },
+                            {
+                                "term": "to",
+                                "dur": 0.11,
+                                "start": 43.67
+                            },
+                            {
+                                "term": "getting",
+                                "dur": 0.27,
+                                "start": 43.78
+                            },
+                            {
+                                "term": "order",
+                                "dur": 0.53,
+                                "start": 44.22
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 46.71,
+                        "dur": 2.44,
+                        "terms": [
+                            {
+                                "term": "oh",
+                                "dur": 0.2,
+                                "start": 46.71
+                            },
+                            {
+                                "term": "look",
+                                "dur": 0.18,
+                                "start": 46.91
+                            },
+                            {
+                                "term": "forward",
+                                "dur": 0.41,
+                                "start": 47.14
+                            },
+                            {
+                                "term": "to",
+                                "dur": 0.22,
+                                "start": 47.6
+                            },
+                            {
+                                "term": "maybe",
+                                "dur": 0.32,
+                                "start": 48.26
+                            },
+                            {
+                                "term": "not",
+                                "dur": 0.18,
+                                "start": 48.62
+                            },
+                            {
+                                "term": "getting",
+                                "dur": 0.21,
+                                "start": 48.8
+                            },
+                            {
+                                "term": "sick",
+                                "dur": 0.09,
+                                "start": 49.06
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 51.64,
+                        "dur": 0.3,
+                        "terms": [
+                            {
+                                "term": "okay",
+                                "dur": 0.3,
+                                "start": 51.64
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 52.8,
+                        "dur": 0.22,
+                        "terms": [
+                            {
+                                "term": "uh-huh",
+                                "dur": 0.22,
+                                "start": 52.8
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 53.06,
+                        "dur": 3.9,
+                        "terms": [
+                            {
+                                "term": "good",
+                                "dur": 0.23,
+                                "start": 53.06
+                            },
+                            {
+                                "term": "right",
+                                "dur": 0.21,
+                                "start": 53.88
+                            },
+                            {
+                                "term": "I",
+                                "dur": 0.1,
+                                "start": 54.18
+                            },
+                            {
+                                "term": "think",
+                                "dur": 0.15,
+                                "start": 54.28
+                            },
+                            {
+                                "term": "that",
+                                "dur": 0.12,
+                                "start": 54.43
+                            },
+                            {
+                                "term": "might",
+                                "dur": 0.15,
+                                "start": 54.55
+                            },
+                            {
+                                "term": "be",
+                                "dur": 0.09,
+                                "start": 54.7
+                            },
+                            {
+                                "term": "a",
+                                "dur": 0.06,
+                                "start": 54.79
+                            },
+                            {
+                                "term": "good",
+                                "dur": 0.13,
+                                "start": 54.85
+                            },
+                            {
+                                "term": "enough",
+                                "dur": 0.14,
+                                "start": 55.02
+                            },
+                            {
+                                "term": "sample",
+                                "dur": 0.39,
+                                "start": 55.26
+                            },
+                            {
+                                "term": "let's",
+                                "dur": 0.36,
+                                "start": 55.68
+                            },
+                            {
+                                "term": "let's",
+                                "dur": 0.14,
+                                "start": 56.29
+                            },
+                            {
+                                "term": "see",
+                                "dur": 0.12,
+                                "start": 56.43
+                            },
+                            {
+                                "term": "how",
+                                "dur": 0.14,
+                                "start": 56.55
+                            },
+                            {
+                                "term": "it",
+                                "dur": 0.07,
+                                "start": 56.69
+                            },
+                            {
+                                "term": "goes",
+                                "dur": 0.2,
+                                "start": 56.76
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 57.07,
+                        "dur": 0.4,
+                        "terms": [
+                            {
+                                "term": "uh-huh",
+                                "dur": 0.4,
+                                "start": 57.07
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 57.62,
+                        "dur": 0.19,
+                        "terms": [
+                            {
+                                "term": "yeah",
+                                "dur": 0.19,
+                                "start": 57.62
+                            }
+                        ],
+                        "language": "en"
+                    },
+                    {
+                        "start": 58.68,
+                        "dur": 0.17,
+                        "terms": [
+                            {
+                                "term": "right",
+                                "dur": 0.17,
+                                "start": 58.68
+                            }
+                        ],
+                        "language": "en"
+                    }
+                ],
+                "meta": {
+                    "version": 1,
+                    "format": "clarify_transcript"
+                }
+            }
+        }
+    ],
+    "_class": "TranscriptR4Insight",
+    "_links": {
+        "self": {
+            "href": "/v1/bundles/1577e8f9d42c4d12a762f53cd9f4188c/insights/22c929380bb242329de1076426ec0e4b"
+        },
+        "curies": [
+            {
+                "href": "/docs/rels/{rel}",
+                "name": "clarify",
+                "templated": true
+            }
+        ],
+        "parent": {
+            "href": "/v1/bundles/1577e8f9d42c4d12a762f53cd9f4188c/insights"
+        },
+        "clarify:bundle": {
+            "href": "/v1/bundles/1577e8f9d42c4d12a762f53cd9f4188c"
+        }
+    }
+}

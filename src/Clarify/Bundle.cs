@@ -1,47 +1,44 @@
 ﻿using System;
+using System.Runtime.Serialization;
+
+using Newtonsoft.Json;
 
 namespace Clarify
 {
 
     [HalClass("Bundle")]
+    [DataContract]
     public class Bundle :
         HalObject
     {
-        
-        public Guid Id
-        {
-            get { return GetPropertyValue<Guid>("id"); }
-        }
 
-        public int Version
-        {
-            get { return GetPropertyValue<int>("version"); }
-        }
+        [DataMember]
+        [JsonProperty("id")]
+        public Guid Id { get; set; }
 
-        public string Name
-        {
-            get { return GetPropertyValue<string>("name"); }
-        }
+        [DataMember]
+        [JsonProperty("version")]
+        public int Version { get; set; }
 
-        public string ExternalId
-        {
-            get { return GetPropertyValue<string>("external_id"); }
-        }
+        [DataMember]
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
-        public Uri NotifyUrl
-        {
-            get { return GetPropertyValue<Uri>("notify_url"); }
-        }
+        [DataMember]
+        [JsonProperty("external_id")]
+        public string ExternalId { get; set; }
 
-        public DateTime Created
-        {
-            get { return GetPropertyValue<DateTime>("created"); }
-        }
+        [DataMember]
+        [JsonProperty("notify_url")]
+        public Uri NotifyUrl { get; set; }
 
-        public DateTime Updated
-        {
-            get { return GetPropertyValue<DateTime>("updated"); }
-        }
+        [DataMember]
+        [JsonProperty("created")]
+        public DateTime Created { get; set; }
+
+        [DataMember]
+        [JsonProperty("updated")]
+        public DateTime Updated { get; set; }
 
     }
 

@@ -1,46 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Runtime.Serialization;
+
+using Newtonsoft.Json;
 
 namespace Clarify
 {
 
     [HalClass("Insights")]
+    [DataContract]
     public class Insights :
         HalObject
     {
 
-        readonly Lazy<Dictionary<string, HalLink>> insights;
+        [DataMember]
+        [JsonProperty("bundle_id")]
+        public Guid BundleId { get; set; }
 
-        /// <summary>
-        /// Initializes a new instance.
-        /// </summary>
-        public Insights()
-        {
-            insights = new Lazy<Dictionary<string, HalLink>>(() => HalLinks
-                .Where(i => i.Key.StartsWith("insight:"))
-                .ToDictionary(i => i.Key, i => HalLinks.GetLink(i.Key)));
-        }
+        [DataMember]
+        [JsonProperty("created")]
+        public DateTime Created { get; set; }
 
-        public Guid BundleId
-        {
-            get { return GetPropertyValue<Guid>("bundle_id"); }
-        }
-
-        public DateTime Created
-        {
-            get { return GetPropertyValue<DateTime>("created"); }
-        }
-
-        public DateTime Updated
-        {
-            get { return GetPropertyValue<DateTime>("updated"); }
-        }
-
-        public IDictionary<string, HalLink> InsightLinks
-        {
-            get { return insights.Value; }
-        }
+        [DataMember]
+        [JsonProperty("updated")]
+        public DateTime Updated { get; set; }
 
     }
 

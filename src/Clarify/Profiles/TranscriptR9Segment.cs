@@ -2,11 +2,11 @@
 
 using Newtonsoft.Json;
 
-namespace Clarify.Insights
+namespace Clarify.Profiles
 {
 
     [DataContract]
-    public class TranscriptSegment
+    public class TranscriptR9Segment
     {
 
         [DataMember]
@@ -15,7 +15,7 @@ namespace Clarify.Insights
 
         [DataMember]
         [JsonProperty("terms")]
-        public TranscriptTerm[] Terms { get; set; }
+        public TranscriptR9Term[] Terms { get; set; }
 
     }
 

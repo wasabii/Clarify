@@ -1,10 +1,10 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Clarify.Insights
+namespace Clarify.Profiles
 {
 
     [DataContract]
-    public abstract class TrackInsightData
+    public class TranscriptR9TrackData
     {
 
 

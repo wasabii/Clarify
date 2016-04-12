@@ -1,7 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Clarify
 {
@@ -21,26 +20,6 @@ namespace Clarify
         [DataMember]
         [JsonProperty("templated")]
         public bool Templated { get; set; }
-
-        /// <summary>
-        /// Returns a <see cref="HalLink"/> of the specified generic type from this <see cref="HalLink"/>.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        public HalLink<T> As<T>()
-            where T : HalObject
-        {
-            return JObject.FromObject(this).ToObject<HalLink<T>>();
-        }
-
-    }
-
-    public class HalLink<T> :
-        HalLink
-        where T : HalObject
-    {
-
-
 
     }
 

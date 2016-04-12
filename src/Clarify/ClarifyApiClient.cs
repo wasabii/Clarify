@@ -121,6 +121,10 @@ namespace Clarify
             if (typeof(T).IsAssignableFrom(type))
                 return (T)o.ToObject(type);
 
+            // requested type is a descendant of discovered type, so use
+            if (typeof(T).IsSubclassOf(type))
+                return (T)o.ToObject(typeof(T));
+
             throw new HalException();
         }
 
@@ -288,7 +292,23 @@ namespace Clarify
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
             Contract.Requires<ArgumentOutOfRangeException>(insightId != Guid.Empty);
 
-            return await GetHalObjectAsync<Insight>(HttpMethod.Get, ApiUri
+            return await GetBundleInsightAsync<Insight>(bundleId, insightId);
+        }
+
+        /// <summary>
+        /// GET /bundles/{bundleId}/insights/{insightId}
+        /// </summary>
+        /// <typeparam name="TInsight"></typeparam>
+        /// <param name="bundleId"></param>
+        /// <param name="insightId"></param>
+        /// <returns></returns>
+        public async Task<TInsight> GetBundleInsightAsync<TInsight>(Guid bundleId, Guid insightId)
+            where TInsight : Insight
+        {
+            Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
+            Contract.Requires<ArgumentOutOfRangeException>(insightId != Guid.Empty);
+
+            return await GetHalObjectAsync<TInsight>(HttpMethod.Get, ApiUri
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N"))
                 .Combine("insights")

@@ -3,15 +3,15 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Clarify.Insights
+namespace Clarify.Profiles
 {
 
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum TranscriptTermType
+    public enum ClassificationAcoustics
     {
 
-        [EnumMember(Value = "mark")]
-        Mark,
+        [EnumMember(Value = "telephone")]
+        Telephone,
 
     }
 

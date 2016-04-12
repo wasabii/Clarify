@@ -2,24 +2,24 @@
 
 using Newtonsoft.Json;
 
-namespace Clarify.Insights
+namespace Clarify.Profiles
 {
 
     [DataContract]
-    public class TranscriptR4Transcript
+    public class TranscriptR9Transcript
     {
 
         [DataMember]
         [JsonProperty("speakers")]
-        public TranscriptSpeaker[] Speakers { get; set; }
+        public TranscriptR9Speaker[] Speakers { get; set; }
 
         [DataMember]
         [JsonProperty("segments")]
-        public TranscriptSegment[] Segments { get; set; }
+        public TranscriptR9Segment[] Segments { get; set; }
 
         [DataMember]
         [JsonProperty("meta")]
-        public TranscriptMeta Meta { get; set; }
+        public TranscriptR9Meta Meta { get; set; }
 
     }
 

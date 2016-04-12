@@ -2,7 +2,7 @@
 
 using Newtonsoft.Json;
 
-namespace Clarify.Insights
+namespace Clarify.Profiles
 {
 
     [DataContract]

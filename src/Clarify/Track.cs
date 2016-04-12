@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace Clarify
 {
@@ -9,85 +10,69 @@ namespace Clarify
         HalObject
     {
 
-        public Guid Id
-        {
-            get { return GetPropertyValue<Guid>("id"); }
-        }
+        [DataMember]
+        [JsonProperty("id")]
+        public Guid Id { get; set; }
 
-        public int Index
-        {
-            get { return GetPropertyValue<int>("track"); }
-        }
+        [DataMember]
+        [JsonProperty("track")]
+        public int Index { get; set; }
 
-        public string Label
-        {
-            get { return GetPropertyValue<string>("label"); }
-        }
+        [DataMember]
+        [JsonProperty("label")]
+        public string Label { get; set; }
 
-        public Uri MediaUrl
-        {
-            get { return GetPropertyValue<Uri>("media_url"); }
-        }
+        [DataMember]
+        [JsonProperty("media_url")]
+        public Uri MediaUrl { get; set; }
 
-        public AudioChannel AudioChannel
-        {
-            get { return GetPropertyValue<AudioChannel>("audio_channel"); }
-        }
+        [DataMember]
+        [JsonProperty("audio_channel")]
+        public AudioChannel AudioChannel { get; set; }
 
-        public AudioLanguage AudioLanguage
-        {
-            get { return GetPropertyValue<AudioLanguage>("audio_language"); }
-        }
+        [DataMember]
+        [JsonProperty("audio_language")]
+        public AudioLanguage AudioLanguage { get; set; }
 
-        public DateTime Created
-        {
-            get { return GetPropertyValue<DateTime>("created"); }
-        }
+        [DataMember]
+        [JsonProperty("created")]
+        public DateTime Created { get; set; }
 
-        public DateTime Updated
-        {
-            get { return GetPropertyValue<DateTime>("updated"); }
-        }
+        [DataMember]
+        [JsonProperty("updated")]
+        public DateTime Updated { get; set; }
 
-        public TrackStatus Status
-        {
-            get { return GetPropertyValue<TrackStatus>("status"); }
-        }
+        [DataMember]
+        [JsonProperty("status")]
+        public TrackStatus Status { get; set; }
 
-        public string MimeType
-        {
-            get { return GetPropertyValue<string>("mime_type"); }
-        }
+        [DataMember]
+        [JsonProperty("mime_type")]
+        public string MimeType { get; set; }
 
-        public int MediaSize
-        {
-            get { return GetPropertyValue<int>("media_size"); }
-        }
+        [DataMember]
+        [JsonProperty("media_size")]
+        public int MediaSize { get; set; }
 
-        public double Duration
-        {
-            get { return GetPropertyValue<double>("duration"); }
-        }
+        [DataMember]
+        [JsonProperty("duration")]
+        public double Duration { get; set; }
 
-        public int FetchResponseCode
-        {
-            get { return GetPropertyValue<int>("fetch_response_code"); }
-        }
+        [DataMember]
+        [JsonProperty("fetch_response_code")]
+        public int FetchResponseCode { get; set; }
 
-        public string FetchResponseMessage
-        {
-            get { return GetPropertyValue<string>("fetch_response_message"); }
-        }
+        [DataMember]
+        [JsonProperty("fetch_response_message")]
+        public string FetchResponseMessage { get; set; }
 
-        public int MediaCode
-        {
-            get { return GetPropertyValue<int>("media_code"); }
-        }
+        [DataMember]
+        [JsonProperty("media_code")]
+        public int MediaCode { get; set; }
 
-        public string MediaMessage
-        {
-            get { return GetPropertyValue<string>("media_message"); }
-        }
+        [DataMember]
+        [JsonProperty("media_message")]
+        public string MediaMessage { get; set; }
 
     }
 

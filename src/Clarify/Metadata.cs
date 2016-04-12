@@ -1,37 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
+
+using Newtonsoft.Json;
 
 namespace Clarify
 {
 
+    [DataContract]
     public class Metadata :
         HalObject
     {
 
-        public Guid BundleId
-        {
-            get { return GetPropertyValue<Guid>("bundle_id"); }
-        }
+        [DataMember]
+        [JsonProperty("bundle_id")]
+        public Guid BundleId { get; set; }
 
-        public int Version
-        {
-            get { return GetPropertyValue<int>("version"); }
-        }
+        [DataMember]
+        [JsonProperty("version")]
+        public int Version { get; set; }
 
-        public DateTime Created
-        {
-            get { return GetPropertyValue<DateTime>("created"); }
-        }
+        [DataMember]
+        [JsonProperty("created")]
+        public DateTime Created { get; set; }
 
-        public DateTime Updated
-        {
-            get { return GetPropertyValue<DateTime>("updated"); }
-        }
+        [DataMember]
+        [JsonProperty("updated")]
+        public DateTime Updated { get; set; }
 
-        public Dictionary<string, object> Data
-        {
-            get { return GetPropertyValue<Dictionary<string, object>>("data"); }
-        }
+        [DataMember]
+        [JsonProperty("data")]
+        public Dictionary<string, object> Data { get; set; }
 
     }
 

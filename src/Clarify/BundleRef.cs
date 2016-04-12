@@ -1,30 +1,33 @@
 ﻿using System;
+using System.Runtime.Serialization;
+
+using Newtonsoft.Json;
 
 namespace Clarify
 {
 
+    [DataContract]
     public class BundleRef :
         Ref<Bundle>
     {
 
-        public Guid Id
+        [DataMember]
+        [JsonProperty("id")]
+        public Guid Id { get; set; }
+
+        public HalLink Metadata
         {
-            get { return GetPropertyValue<Guid>("id"); }
+            get { return HalLinks.GetLink("clarify:metadata"); }
         }
 
-        public HalLink<Metadata> Metadata
+        public HalLink Tracks
         {
-            get { return HalLinks.GetLink<Metadata>("clarify:metadata"); }
+            get { return HalLinks.GetLink("clarify:tracks"); }
         }
 
-        public HalLink<Tracks> Tracks
+        public HalLink Insights
         {
-            get { return HalLinks.GetLink<Tracks>("clarify:tracks"); }
-        }
-
-        public HalLink<Insights> Insights
-        {
-            get { return HalLinks.GetLink< Insights>("clarify:insights"); }
+            get { return HalLinks.GetLink("clarify:insights"); }
         }
 
     }

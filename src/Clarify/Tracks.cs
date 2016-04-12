@@ -2,45 +2,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
+
+using Newtonsoft.Json;
 
 namespace Clarify
 {
 
     [HalClass("Tracks")]
+    [DataContract]
     public class Tracks :
         HalObject,
         IEnumerable<Track>
     {
 
-        public Guid BundleId
-        {
-            get { return GetPropertyValue<Guid>("bundle_id"); }
-        }
+        [DataMember]
+        [JsonProperty("bundle_id")]
+        public Guid BundleId { get; set; }
 
-        public int Version
-        {
-            get { return GetPropertyValue<int>("version"); }
-        }
+        [DataMember]
+        [JsonProperty("version")]
+        public int Version { get; set; }
 
-        public TrackStatus Status
-        {
-            get { return GetPropertyValue<TrackStatus>("status"); }
-        }
+        [DataMember]
+        [JsonProperty("status")]
+        public TrackStatus Status { get; set; }
 
-        public DateTime Created
-        {
-            get { return GetPropertyValue<DateTime>("created"); }
-        }
+        [DataMember]
+        [JsonProperty("created")]
+        public DateTime Created { get; set; }
 
-        public DateTime Updated
-        {
-            get { return GetPropertyValue<DateTime>("updated"); }
-        }
+        [DataMember]
+        [JsonProperty("updated")]
+        public DateTime Updated { get; set; }
 
-        public Track[] TrackList
-        {
-            get { return GetPropertyValue<Track[]>("tracks"); }
-        }
+        [DataMember]
+        [JsonProperty("tracks")]
+        public Track[] TrackList { get; set; }
 
         IEnumerator<Track> IEnumerable<Track>.GetEnumerator()
         {

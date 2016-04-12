@@ -1,12 +1,11 @@
 ﻿using System.Runtime.Serialization;
-
 using Newtonsoft.Json;
 
-namespace Clarify.Insights
+namespace Clarify.Profiles
 {
 
     [DataContract]
-    public class TranscriptR4InsightData
+    public class TranscriptR4TrackData
     {
 
         [DataMember]

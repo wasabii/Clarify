@@ -1,40 +1,43 @@
 ﻿using System;
+using System.Runtime.Serialization;
+
+using Newtonsoft.Json;
 
 namespace Clarify
 {
 
+    [DataContract]
     public class Insight :
         HalObject
     {
 
-        public Guid Id
-        {
-            get { return GetPropertyValue<Guid>("id"); }
-        }
+        [DataMember]
+        [JsonProperty("id")]
+        public Guid Id { get; set; }
 
-        public Guid BundleId
-        {
-            get { return GetPropertyValue<Guid>("bundle_id"); }
-        }
+        [DataMember]
+        [JsonProperty("bundle_id")]
+        public Guid BundleId { get; set; }
 
-        public string Name
-        {
-            get { return GetPropertyValue<string>("name"); }
-        }
+        [DataMember]
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
-        public InsightStatus Status
-        {
-            get { return GetPropertyValue<InsightStatus>("status"); }
-        }
+        [DataMember]
+        [JsonProperty("status")]
+        public InsightStatus Status { get; set; }
 
-        public DateTime Created
-        {
-            get { return GetPropertyValue<DateTime>("created"); }
-        }
+        [DataMember]
+        [JsonProperty("created")]
+        public DateTime Created { get; set; }
 
-        public DateTime Updated
+        [DataMember]
+        [JsonProperty("updated")]
+        public DateTime Updated { get; set; }
+
+        public HalLink BundleLink
         {
-            get { return GetPropertyValue<DateTime>("updated"); }
+            get { return HalLinks.GetLink("clarify:bundle"); }
         }
 
     }
