@@ -1,10 +1,11 @@
 ﻿using System;
-using System.IO;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+
 using Clarify.Profiles;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Clarify.Tests
@@ -42,6 +43,12 @@ namespace Clarify.Tests
             var w = XmlWriter.Create(m);
             s.WriteObject(w, t.TrackData[0].Transcript);
             w.Flush();
+        }
+
+        [TestMethod]
+        public async Task Test_GetTracks()
+        {
+            var tracks = await  api.GetBundleTracksAsync(new Guid("0776e112-2fbc-4355-8085-2a6e66484920"));
         }
 
     }

@@ -19,12 +19,12 @@ namespace Clarify
 
         public HalLink SelfLink
         {
-            get { return HalLinks.Self; }
+            get { return HalLinks?.Self; }
         }
 
         public HalLink ParentLink
         {
-            get { return HalLinks.Parent; }
+            get { return HalLinks?.Parent; }
         }
 
     }

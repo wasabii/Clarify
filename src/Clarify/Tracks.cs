@@ -11,6 +11,7 @@ namespace Clarify
 
     [HalClass("Tracks")]
     [DataContract]
+    [JsonObject]
     public class Tracks :
         HalObject,
         IEnumerable<Track>

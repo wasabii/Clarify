@@ -144,6 +144,7 @@
   <ItemGroup>
     <Compile Include="HalLinksJsonConverter.cs" />
     <Compile Include="Profiles\ClassificationAcoustics.cs" />
+    <Compile Include="Profiles\InsightType.cs" />
     <Compile Include="Profiles\SpokenWordsTrackData.cs" />
     <Compile Include="Profiles\SpokenWordsInsight.cs" />
     <Compile Include="Profiles\ClassificationInsight.cs" />

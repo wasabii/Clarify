@@ -266,7 +266,8 @@ namespace Clarify
         /// <param name="bundleId"></param>
         /// <param name="insight"></param>
         /// <returns></returns>
-        public async Task<Insight> PostBundleInsightsAsync(Guid bundleId, string insight)
+        public async Task<TInsight> PostBundleInsightAsync<TInsight>(Guid bundleId, string insight)
+            where TInsight : Insight
         {
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
             Contract.Requires<ArgumentNullException>(insight != null);
@@ -277,8 +278,22 @@ namespace Clarify
                 .Combine("insights")))
             {
                 request.Content = new FormUrlEncodedContent(new Dictionary<string, string> { { "insight", insight } });
-                return await GetHalObjectAsync<Insight>(request);
+                return await GetHalObjectAsync<TInsight>(request);
             }
+        }
+
+        /// <summary>
+        /// POST /bundles/{bundleId}/insights
+        /// </summary>
+        /// <param name="bundleId"></param>
+        /// <param name="insight"></param>
+        /// <returns></returns>
+        public async Task<Insight> PostBundleInsightAsync(Guid bundleId, string insight)
+        {
+            Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
+            Contract.Requires<ArgumentNullException>(insight != null);
+
+            return await PostBundleInsightAsync<Insight>(bundleId, insight);
         }
 
         /// <summary>
