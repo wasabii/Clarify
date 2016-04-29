@@ -64,7 +64,7 @@ namespace Clarify
         /// </summary>
         /// <param name="apiKey"></param>
         public ClarifyApiClient(string apiKey)
-            : this(new Uri("https://api.clarify.io/v1"), apiKey)
+            : this(new Uri("https://api.clarify.io"), apiKey)
         {
             Contract.Requires<ArgumentNullException>(apiKey != null);
         }
@@ -79,12 +79,20 @@ namespace Clarify
         }
 
         /// <summary>
+        /// Gets the URI prefix for V1 of the Clarify API.
+        /// </summary>
+        Uri ApiUriV1
+        {
+            get { return ApiUri.Combine("v1"); }
+        }
+
+        /// <summary>
         /// Gets the configured API key.
         /// </summary>
         public string ApiKey
         {
             get { return http.DefaultRequestHeaders.Authorization.Parameter; }
-            private set { http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", value); }
+            set { http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", value); }
         }
 
         /// <summary>
@@ -189,7 +197,7 @@ namespace Clarify
         {
             Contract.Requires<ArgumentNullException>(request != null);
 
-            using (var message = new HttpRequestMessage(HttpMethod.Post, ApiUri
+            using (var message = new HttpRequestMessage(HttpMethod.Post, ApiUriV1
                 .Combine("bundles")))
             {
                 message.Content = new FormUrlEncodedContent(ToKeyValuePairs(JObject.FromObject(request)));
@@ -206,7 +214,7 @@ namespace Clarify
         {
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
 
-            return await GetHalObjectAsync<Bundle>(HttpMethod.Get, ApiUri
+            return await GetHalObjectAsync<Bundle>(HttpMethod.Get, ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N")));
         }
@@ -222,7 +230,7 @@ namespace Clarify
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
             Contract.Requires<ArgumentNullException>(request != null);
 
-            using (var req = new HttpRequestMessage(HttpMethod.Put, ApiUri
+            using (var req = new HttpRequestMessage(HttpMethod.Put, ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N"))))
             {
@@ -240,7 +248,7 @@ namespace Clarify
         {
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
 
-            await http.DeleteAsync(ApiUri
+            await http.DeleteAsync(ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N")));
         }
@@ -254,7 +262,7 @@ namespace Clarify
         {
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
 
-            return await GetHalObjectAsync<Insights>(HttpMethod.Get, ApiUri
+            return await GetHalObjectAsync<Insights>(HttpMethod.Get, ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N"))
                 .Combine("insights"));
@@ -272,7 +280,7 @@ namespace Clarify
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
             Contract.Requires<ArgumentNullException>(insight != null);
 
-            using (var request = new HttpRequestMessage(HttpMethod.Post, ApiUri
+            using (var request = new HttpRequestMessage(HttpMethod.Post, ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N"))
                 .Combine("insights")))
@@ -323,7 +331,7 @@ namespace Clarify
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
             Contract.Requires<ArgumentOutOfRangeException>(insightId != Guid.Empty);
 
-            return await GetHalObjectAsync<TInsight>(HttpMethod.Get, ApiUri
+            return await GetHalObjectAsync<TInsight>(HttpMethod.Get, ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N"))
                 .Combine("insights")
@@ -339,7 +347,7 @@ namespace Clarify
         {
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
 
-            return await GetHalObjectAsync<Metadata>(HttpMethod.Get, ApiUri
+            return await GetHalObjectAsync<Metadata>(HttpMethod.Get, ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N"))
                 .Combine("insights"));
@@ -354,7 +362,7 @@ namespace Clarify
         {
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
 
-            await http.DeleteAsync(ApiUri
+            await http.DeleteAsync(ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N"))
                 .Combine("metadata"));
@@ -371,7 +379,7 @@ namespace Clarify
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
             Contract.Requires<ArgumentNullException>(data != null);
 
-            using (var req = new HttpRequestMessage(HttpMethod.Put, ApiUri
+            using (var req = new HttpRequestMessage(HttpMethod.Put, ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N"))
                 .Combine("metadata")))
@@ -393,7 +401,7 @@ namespace Clarify
         {
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
 
-            return await GetHalObjectAsync<Tracks>(HttpMethod.Get, ApiUri
+            return await GetHalObjectAsync<Tracks>(HttpMethod.Get, ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N"))
                 .Combine("tracks"));
@@ -410,7 +418,7 @@ namespace Clarify
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
             Contract.Requires<ArgumentNullException>(request != null);
 
-            using (var req = new HttpRequestMessage(HttpMethod.Post, ApiUri
+            using (var req = new HttpRequestMessage(HttpMethod.Post, ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N"))
                 .Combine("tracks")))
@@ -429,7 +437,7 @@ namespace Clarify
         {
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
 
-            await http.DeleteAsync(ApiUri
+            await http.DeleteAsync(ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N"))
                 .Combine("tracks"));
@@ -446,7 +454,7 @@ namespace Clarify
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
             Contract.Requires<ArgumentOutOfRangeException>(trackId != Guid.Empty);
 
-            using (var req = new HttpRequestMessage(HttpMethod.Get, ApiUri
+            using (var req = new HttpRequestMessage(HttpMethod.Get, ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N"))
                 .Combine("tracks")
@@ -473,7 +481,7 @@ namespace Clarify
             Contract.Requires<ArgumentOutOfRangeException>(bundleId != Guid.Empty);
             Contract.Requires<ArgumentOutOfRangeException>(trackId != Guid.Empty);
 
-            await http.DeleteAsync(ApiUri
+            await http.DeleteAsync(ApiUriV1
                 .Combine("bundles")
                 .Combine(bundleId.ToString("N"))
                 .Combine("tracks")

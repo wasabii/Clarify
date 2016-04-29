@@ -51,6 +51,21 @@ namespace Clarify.Tests
             var tracks = await  api.GetBundleTracksAsync(new Guid("0776e112-2fbc-4355-8085-2a6e66484920"));
         }
 
+        [TestMethod]
+        public async Task Test_Local()
+        {
+            var api = new ClarifyApiClient(new Uri("http://localhost:15676/v1"), "TOKEN");
+            await api.PostBundleAsync(new BundlePostRequest()
+            {
+                Name = "test",
+                AudioChannel = AudioChannel.Left,
+                AudioLanguage = AudioLanguage.en_US,
+                MediaUrl = new Uri("http://www.media.com"),
+                NotifyUrl = new Uri("http://notify.com"),
+                ExternalId = "123123",
+            });
+        }
+
     }
 
 }
