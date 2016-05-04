@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clarify", "Clarify\Clarify.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clarify.Tests", "Clarify.Tests\Clarify.Tests.csproj", "{12332EB2-6E34-43AB-B9FC-A252C330CFCD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clarify.Service.Mock", "Clarify.Service.Mock\Clarify.Service.Mock.csproj", "{D9B3588B-9DAD-40A1-B5D2-DACAF5B62178}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{12332EB2-6E34-43AB-B9FC-A252C330CFCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12332EB2-6E34-43AB-B9FC-A252C330CFCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12332EB2-6E34-43AB-B9FC-A252C330CFCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B3588B-9DAD-40A1-B5D2-DACAF5B62178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B3588B-9DAD-40A1-B5D2-DACAF5B62178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B3588B-9DAD-40A1-B5D2-DACAF5B62178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B3588B-9DAD-40A1-B5D2-DACAF5B62178}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

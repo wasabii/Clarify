@@ -39,7 +39,20 @@ namespace Clarify
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            throw new NotImplementedException();
+            var links = value as HalLinks;
+            if (links == null)
+            {
+                writer.WriteNull();
+                return;
+            }
+
+            writer.WriteStartObject();
+            foreach (var link in links)
+            {
+                writer.WritePropertyName(link.Key);
+                serializer.Serialize(writer, link.Value);
+            }
+            writer.WriteEndObject();
         }
 
     }
