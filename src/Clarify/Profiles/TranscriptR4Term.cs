@@ -1,23 +1,20 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
 
 using Newtonsoft.Json;
 
 namespace Clarify.Profiles
 {
 
-    [DataContract]
+    [Serializable]
     public class TranscriptR4Term
     {
-
-        [DataMember]
+        
         [JsonProperty("start")]
         public double Start { get; set; }
-
-        [DataMember]
+        
         [JsonProperty("dur")]
         public double Duration { get; set; }
-
-        [DataMember]
+        
         [JsonProperty("term")]
         public string Term { get; set; }
 

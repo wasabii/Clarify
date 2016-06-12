@@ -1,4 +1,4 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
 
 using Newtonsoft.Json;
 
@@ -6,12 +6,11 @@ namespace Clarify.Profiles
 {
 
     [HalClass("SpokenWordsInsight")]
-    [DataContract]
+    [Serializable]
     public class SpokenWordsInsight :
         Insight
     {
         
-        [DataMember]
         [JsonProperty("track_data")]
         public SpokenWordsTrackData[] TrackData { get; set; }
 

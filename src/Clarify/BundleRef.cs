@@ -6,12 +6,11 @@ using Newtonsoft.Json;
 namespace Clarify
 {
 
-    [DataContract]
+    [Serializable]
     public class BundleRef :
         Ref<Bundle>
     {
-
-        [DataMember]
+        
         [JsonProperty("id")]
         public Guid Id { get; set; }
 

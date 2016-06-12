@@ -1,19 +1,17 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
 
 using Newtonsoft.Json;
 
 namespace Clarify.Profiles
 {
 
-    [DataContract]
+    [Serializable]
     public class TranscriptMeta
     {
-
-        [DataMember]
+        
         [JsonProperty("version")]
         public int Version { get; set; }
-
-        [DataMember]
+        
         [JsonProperty("format")]
         public string Format { get; set; }
 

@@ -1,10 +1,10 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
 
 namespace Clarify
 {
 
     [HalClass("Ref")]
-    [DataContract]
+    [Serializable]
     public class Ref :
         HalObject
     {
@@ -13,7 +13,7 @@ namespace Clarify
 
     }
 
-    [DataContract]
+    [Serializable]
     public class Ref<T> :
         Ref
     {

@@ -1,4 +1,4 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
 
 using Newtonsoft.Json;
 
@@ -6,12 +6,11 @@ namespace Clarify.Profiles
 {
 
     [HalClass("TranscriptR9Insight")]
-    [DataContract]
+    [Serializable]
     public class TranscriptR9Insight :
         Insight
     {
         
-        [DataMember]
         [JsonProperty("track_data")]
         public TranscriptR9TrackData[] TrackData { get; set; }
 

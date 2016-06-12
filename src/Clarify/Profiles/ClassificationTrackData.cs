@@ -1,19 +1,17 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
 
 using Newtonsoft.Json;
 
 namespace Clarify.Profiles
 {
 
-    [DataContract]
+    [Serializable]
     public class ClassificationTrackData
     {
 
-        [DataMember]
         [JsonProperty("acoustics")]
         public ClassificationAcoustics[] Acoustics { get; set; }
 
-        [DataMember]
         [JsonProperty("spoken_languages")]
         public AudioLanguage[] SpokenLanguages { get; set; }
 

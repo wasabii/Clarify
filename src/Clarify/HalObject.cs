@@ -1,19 +1,17 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
 
 using Newtonsoft.Json;
 
 namespace Clarify
 {
 
-    [DataContract]
+    [Serializable]
     public abstract class HalObject
     {
         
-        [DataMember]
         [JsonProperty("_class")]
         public string HalClass { get; set; }
-
-        [DataMember]
+        
         [JsonProperty("_links")]
         public HalLinks HalLinks { get; set; }
 

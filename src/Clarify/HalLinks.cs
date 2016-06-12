@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
-
 using Clarify.Util;
 
 using Newtonsoft.Json;
@@ -8,8 +8,9 @@ using Newtonsoft.Json;
 namespace Clarify
 {
 
-    [DataContract]
+    [Serializable]
     [JsonConverter(typeof(HalLinksJsonConverter))]
+    [KnownType(typeof(HalLink))]
     public class HalLinks :
         Dictionary<string, object>
     {

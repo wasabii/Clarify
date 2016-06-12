@@ -1,23 +1,20 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
 
 using Newtonsoft.Json;
 
 namespace Clarify.Profiles
 {
 
-    [DataContract]
+    [Serializable]
     public class SpokenWordsTrackData
     {
 
-        [DataMember]
         [JsonProperty("spoken_duration")]
         public double SpokenDuration { get; set; }
 
-        [DataMember]
         [JsonProperty("word_count")]
         public int WordCount { get; set; }
 
-        [DataMember]
         [JsonProperty("spoken_duration_percent")]
         public double SpokenDurationPercent { get; set; }
 

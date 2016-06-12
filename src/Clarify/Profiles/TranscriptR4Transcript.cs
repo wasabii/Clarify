@@ -1,19 +1,17 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
 
 using Newtonsoft.Json;
 
 namespace Clarify.Profiles
 {
 
-    [DataContract]
+    [Serializable]
     public class TranscriptR4Transcript
     {
-
-        [DataMember]
+        
         [JsonProperty("segments")]
         public TranscriptR4Segment[] Segments { get; set; }
-
-        [DataMember]
+        
         [JsonProperty("meta")]
         public TranscriptR4Meta Meta { get; set; }
 

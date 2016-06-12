@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,6 +65,20 @@ namespace Clarify.Tests
                 NotifyUrl = new Uri("http://notify.com"),
                 ExternalId = "123123",
             });
+        }
+
+        [TestMethod]
+        public void Test_Serialize()
+        {
+            var i = new Bundle();
+            i.HalLinks = new HalLinks();
+            i.HalLinks.Add("foo", new HalLink());
+            var s = new DataContractSerializer(typeof(Bundle));
+            var m = new MemoryStream();
+            s.WriteObject(m, i);
+            m.Position = 0;
+            i = (Bundle)s.ReadObject(m);
+
         }
 
     }
